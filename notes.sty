@@ -17,9 +17,14 @@
 \usepackage{xcolor}
 \usepackage{siunitx}
 \usepackage{bigints}
-\usepackage{tkz-euclide}
+\usepackage{tikz-cd}
+\usepackage{tikz}
 \usepackage{bm}
 \usepackage{silence}
+
+\usetikzlibrary{calc}
+
+\newcommand{\mathdefault}[1]{#1}
 
 \titlespacing{\section}{0pt}{15pt}{-\parskip}
 \titlespacing{\subsection}{0pt}{10pt}{-\parskip}
@@ -37,6 +42,14 @@
 \newfontfamily{\rawtitlefont}{Futura}[Scale=0.9]
 \setmainfont{Minion Pro}[LetterSpace=1.0, Ligatures=NoCommon]
 \newcommand{\titlefont}[1]{{\rawtitlefont\textcolor[HTML]{222222}{#1}}}
+
+\newcommand*\squeezespaces[1] {
+  \thickmuskip=\scalemuskip{\thickmuskip}{#1}%
+  \medmuskip=\scalemuskip{\medmuskip}{#1}%
+  \thinmuskip=\scalemuskip{\thinmuskip}{#1}%
+  \nulldelimiterspace=#1\nulldelimiterspace
+  \scriptspace=#1\scriptspace
+}
 
 \newcommand{\stdtitle}[3]{\setstretch{1.6}
 \titlefont{\LARGE #1} \\
@@ -57,14 +70,22 @@
 \renewcommand{\footrulewidth}{0pt}
 
 
-\newcommand\SET[2]{\{\,#1\mid#2\,\}}
-\newcommand\Set[1]{\left\{\,#1 \, \right\}}
+\newcommand\SET[2]{\{#1\mid#2\}}
+\newcommand\Set[1]{\left\{#1 \right\}}
+
+\newcommand\id{\text{id}}
+\newcommand\Image{\text{Im}}
+\newcommand\rank{\text{rank}}
+\newcommand\Hom{\text{Hom}}
+\newcommand\Span{\text{span}}
 
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\N}{\mathbb{N}}
+
+\newcommand{\e}{\varepsilon}
 
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
