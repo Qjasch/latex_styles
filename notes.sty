@@ -10,7 +10,6 @@
 \usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{ragged2e}
-\usepackage{mathtools}
 \usepackage{systeme}
 \usepackage{stmaryrd}
 \usepackage{pgfplots}
@@ -22,7 +21,13 @@
 \usepackage{bm}
 \usepackage{silence}
 
+\usepackage{mathtools}
+\usepackage[warnings-off={mathtools-colon,mathtools-overbracket}]{unicode-math}
+
 \usetikzlibrary{calc}
+
+\WarningFilter{unicode-math}{I'm going to overwrite}
+\WarningFilter{unicode-math}{Using \string\overbracket}
 
 \newcommand{\mathdefault}[1]{#1}
 
@@ -41,6 +46,8 @@
 
 \newfontfamily{\rawtitlefont}{Futura}[Scale=0.9]
 \setmainfont{Minion Pro}[LetterSpace=1.0, Ligatures=NoCommon]
+\setmathfont{MnSymbol}
+% \setmathfont{Neo Euler}[range=up/{latin,Latin,greek,Greek}] 
 \newcommand{\titlefont}[1]{{\rawtitlefont\textcolor[HTML]{222222}{#1}}}
 
 \newcommand*\squeezespaces[1] {
@@ -50,6 +57,12 @@
   \nulldelimiterspace=#1\nulldelimiterspace
   \scriptspace=#1\scriptspace
 }
+
+% based on https://tex.stackexchange.com/a/198966/156366
+\newcommand*\scalemuskip[2]{%
+  \muexpr #1*\numexpr\dimexpr#2pt\relax\relax/65536\relax
+} 
+
 
 \newcommand{\stdtitle}[3]{\setstretch{1.6}
 \titlefont{\LARGE #1} \\
@@ -78,6 +91,9 @@
 \newcommand\rank{\text{rank}}
 \newcommand\Hom{\text{Hom}}
 \newcommand\Span{\text{span}}
+
+\newcommand\mol{\text{mol}}
+\DeclareSIUnit\bar{bar}
 
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
@@ -110,5 +126,3 @@
 \raggedright
 
 \everymath{\displaystyle}
-
-
