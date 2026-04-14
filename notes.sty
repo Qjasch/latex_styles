@@ -1,4 +1,4 @@
-\ProvidesPackage{notes}
+\ProvidesPackage{notes}[2026/01/25 v1.0.0 LaTeX styling package for notes]
 
 \usepackage{amsmath, amssymb}
 \usepackage{enumitem}
@@ -94,11 +94,20 @@
 \newcommand\SET[2]{\{#1\mid#2\}}
 \newcommand\Set[1]{\left\{#1 \right\}}
 
-\newcommand\id{\text{id}}
-\newcommand\Image{\text{Im}}
-\newcommand\rank{\text{rank}}
-\newcommand\Hom{\text{Hom}}
-\newcommand\Span{\text{span}}
+% \newcommand\id{\text{id}}
+% \newcommand\Image{\text{Im}}
+% \newcommand\rank{\text{rank}}
+% \newcommand\Hom{\text{Hom}}
+% \newcommand\Span{\text{span}}
+
+
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Image}{Im}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Tr}{Tr}
+% \DeclareMathOperator{\span}{span}
+\DeclareMathOperator{\sign}{sign}
 
 \newcommand\mol{\text{mol}}
 \DeclareSIUnit\bar{bar}
@@ -111,12 +120,14 @@
 
 \renewcommand{\d}{\delta}
 \newcommand{\e}{\varepsilon}
+\newcommand{\p}{\partial}
 
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
 \DeclarePairedDelimiter\norm{\lVert}{\rVert}
+\DeclarePairedDelimiter\abrackets{\langle}{\rangle}
 
 \newcommand\dul[1]{\underline{\underline{#1}}}
 
