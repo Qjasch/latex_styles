@@ -27,9 +27,46 @@ Place `notes.sty` in your project directory and use:
 Copy `notes.sty` to your local texmf directory:
 ```bash
 mkdir -p ~/texmf/tex/latex/notes/
-cp notes.sty ~/texmf/tex/latex/notes/
+cp notes.sty notes.json notes.cwl ~/texmf/tex/latex/notes/
 mktexlsr
 ```
+
+You can also install everything with the helper script:
+```bash
+bash install.sh
+```
+
+To install into a different directory, pass the target path explicitly:
+```bash
+bash install.sh /path/to/your/latex/styles
+```
+
+If you use a custom directory, two things must be true:
+
+1. TeX must be able to find `notes.sty` there, either because the directory is
+  inside a texmf tree or because you added it to `TEXINPUTS`.
+2. VS Code must be told where `notes.json` lives via
+  `latex-workshop.intellisense.package.dirs`.
+
+The simplest setup is still a texmf tree such as `~/texmf/tex/latex/notes/`.
+### VS Code autocompletion
+
+LaTeX Workshop can autocomplete the commands from this package if it can find a
+matching package intellisense file. Copy `notes.json` to the same directory as
+`notes.sty`, then add that directory to your VS Code user settings:
+
+```json
+"latex-workshop.intellisense.package.dirs": ["/Users/you/texmf/tex/latex/notes"]
+```
+
+For an arbitrary directory, set that array to the exact folder containing
+`notes.json`, and make sure `notes.sty` is also discoverable by TeX from that
+same folder or via `TEXINPUTS`.
+
+Also make sure `latex-workshop.intellisense.package.enabled` is set to `true`.
+
+After reloading VS Code, completions for `\usepackage{notes}` documents will be
+available in any LaTeX file that loads the package.
 
 ## Usage
 
@@ -123,24 +160,6 @@ If fonts are not available, comment out the relevant `\setmainfont` or `\setmath
 - **Documents**: Standard articles, reports, books
 - **Presentations**: Beamer class compatible
 - **Backwards Compatibility**: See [CHANGELOG.md](CHANGELOG.md) for version-specific compatibility notes
-
-## License
-
-[Add your license here]
-
-## Contributing
-
-Contributions are welcome! When making changes:
-1. Test with both standard documents and Beamer presentations
-2. Update [CHANGELOG.md](CHANGELOG.md) with your changes
-3. Follow semantic versioning principles
-
-## Support
-
-For issues or questions:
-- Check existing issues on GitHub
-- Review [CHANGELOG.md](CHANGELOG.md) for version-specific notes
-- Consult the included example usage above
 
 ---
 

@@ -20,6 +20,7 @@
 \usepackage{tikz}
 \usepackage{bm}
 \usepackage{silence}
+\usepackage{mhchem}
 \usepackage[hang, flushmargin]{footmisc}
 
 \usepackage{mathtools}
@@ -49,8 +50,11 @@
 
 \pgfplotsset{compat=1.18}
 
-\newfontfamily{\rawtitlefont}{Futura}[Scale=0.9]
-\setmainfont{Minion Pro}[LetterSpace=1.0, Ligatures=NoCommon]
+% \newfontfamily{\rawtitlefont}{Futura}[Scale=0.9]
+\newfontfamily{\rawtitlefont}{GillSans}
+
+% \setmainfont{Minion Pro}[LetterSpace=1.0, Ligatures=NoCommon]
+\setmainfont{EB Garamond}
 \setmathfont{MnSymbol}
 % \setmathfont{Neo Euler}[range=up/{latin,Latin,greek,Greek}] 
 \newcommand{\titlefont}[1]{{\rawtitlefont\textcolor[HTML]{222222}{#1}}}
@@ -94,6 +98,10 @@
 \newcommand\SET[2]{\{#1\mid#2\}}
 \newcommand\Set[1]{\left\{#1 \right\}}
 
+\newcommand\transpose[1]{#1^{\intercal}}
+\newcommand\htranspose[1]{#1^{\dagger}}
+\newcommand\inv[1]{#1^{-1}}
+
 % \newcommand\id{\text{id}}
 % \newcommand\Image{\text{Im}}
 % \newcommand\rank{\text{rank}}
@@ -105,9 +113,14 @@
 \DeclareMathOperator{\Image}{Im}
 \DeclareMathOperator{\rank}{rank}
 \DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Eig}{Eig}
 \DeclareMathOperator{\Tr}{Tr}
-% \DeclareMathOperator{\span}{span}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\spn}{span}
 \DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\diag}{diag}
 
 \newcommand\mol{\text{mol}}
 \DeclareSIUnit\bar{bar}
@@ -117,6 +130,8 @@
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\N}{\mathbb{N}}
+
+\newcommand{\Hol}{\mathcal{H}}
 
 \renewcommand{\d}{\delta}
 \newcommand{\e}{\varepsilon}
@@ -134,6 +149,7 @@
 \makeatletter
 \newcommand{\fa}{\,\hbox{$\forall$}\,}
 \newcommand{\ex}{\;\hbox{$\exists$}\;}
+\newcommand{\exu}{\;\hbox{$\exists$\,!}\;}
 \newcommand{\nex}{\;\hbox{$\nexists$}\;}
 
 \makeatletter
@@ -146,3 +162,11 @@
 }
 
 \everymath{\displaystyle}
+
+\expandafter\def\expandafter\normalsize\expandafter{%
+    \normalsize%
+    \setlength\abovedisplayskip{0pt}%
+    \setlength\belowdisplayskip{8pt}%
+    \setlength\abovedisplayshortskip{-8pt}%
+    \setlength\belowdisplayshortskip{2pt}%
+}

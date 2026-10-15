@@ -1,0 +1,182 @@
+{
+  "deps": [],
+  "macros": [
+    {
+      "name": "mathdefault",
+      "arg": {
+        "format": "{}",
+        "snippet": "mathdefault{${1:arg}}"
+      }
+    },
+    {
+      "name": "titlefont",
+      "arg": {
+        "format": "{}",
+        "snippet": "titlefont{${1:text}}"
+      }
+    },
+    {
+      "name": "stdtitle",
+      "arg": {
+        "format": "{}{}{}",
+        "snippet": "stdtitle{${1:title}}{${2:subtitle}}{${3:author}}"
+      }
+    },
+    {
+      "name": "squeezespaces",
+      "arg": {
+        "format": "{}",
+        "snippet": "squeezespaces{${1:factor}}"
+      }
+    },
+    {
+      "name": "SET",
+      "arg": {
+        "format": "{}{}",
+        "snippet": "SET{${1:elements}}{${2:condition}}"
+      }
+    },
+    {
+      "name": "Set",
+      "arg": {
+        "format": "{}",
+        "snippet": "Set{${1:elements}}"
+      }
+    },
+    {
+      "name": "transpose",
+      "arg": {
+        "format": "{}",
+        "snippet": "transpose{${1:x}}"
+      }
+    },
+    {
+      "name": "htranspose",
+      "arg": {
+        "format": "{}",
+        "snippet": "htranspose{${1:x}}"
+      }
+    },
+    {
+      "name": "inv",
+      "arg": {
+        "format": "{}",
+        "snippet": "inv{${1:x}}"
+      }
+    },
+    {
+      "name": "id"
+    },
+    {
+      "name": "Image"
+    },
+    {
+      "name": "rank"
+    },
+    {
+      "name": "Hom"
+    },
+    {
+      "name": "End"
+    },
+    {
+      "name": "Eig"
+    },
+    {
+      "name": "Tr"
+    },
+    {
+      "name": "GL"
+    },
+    {
+      "name": "span*"
+    },
+    {
+      "name": "sign"
+    },
+    {
+      "name": "mol"
+    },
+    {
+      "name": "R"
+    },
+    {
+      "name": "C"
+    },
+    {
+      "name": "Q"
+    },
+    {
+      "name": "Z"
+    },
+    {
+      "name": "N"
+    },
+    {
+      "name": "d"
+    },
+    {
+      "name": "e"
+    },
+    {
+      "name": "p"
+    },
+    {
+      "name": "ceil",
+      "arg": {
+        "format": "{}",
+        "snippet": "ceil{${1:x}}"
+      }
+    },
+    {
+      "name": "floor",
+      "arg": {
+        "format": "{}",
+        "snippet": "floor{${1:x}}"
+      }
+    },
+    {
+      "name": "abs",
+      "arg": {
+        "format": "{}",
+        "snippet": "abs{${1:x}}"
+      }
+    },
+    {
+      "name": "norm",
+      "arg": {
+        "format": "{}",
+        "snippet": "norm{${1:v}}"
+      }
+    },
+    {
+      "name": "abrackets",
+      "arg": {
+        "format": "{}",
+        "snippet": "abrackets{${1:x}}"
+      }
+    },
+    {
+      "name": "dul",
+      "arg": {
+        "format": "{}",
+        "snippet": "dul{${1:x}}"
+      }
+    },
+    {
+      "name": "fa"
+    },
+    {
+      "name": "ex"
+    },
+    {
+      "name": "exu"
+    },
+    {
+      "name": "nex"
+    }
+  ],
+  "envs": [],
+  "keys": {},
+  "args": []
+}
